@@ -48,3 +48,4 @@ To watch some usage guides, visit [https://help.goorm.io/en/goormide](https://he
 
 # SERVLET_JSP
 ### 9월 7일 : 프로젝트 환경 설정, HELLO WORLD 확인 완료. 
+### 9월 14일 : 로고, 메인화면, 상품 목록 추가.
