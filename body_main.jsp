@@ -3,9 +3,9 @@
 <%@ page import = "dto.Product"%>
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 
-<%! String greeting = "Welcome to TWNARA";
+<%! String greeting = "어서와요 TWNARA";
     String tagline = "Welcome to TWNARA Market!";%>
-    	<div class="jumbotron" style="text-align:center; margin: 0 350px 0 350px; ">
+    	<div class="jumbotron bg-info" style="text-align:center; margin: 0 350px 0 350px; ">
             <div class="container">
                 <h1 class="display-3">
                     <%=greeting%>
@@ -26,7 +26,7 @@
                 <h3><%=product.getPname()%></h3>
                 <p><%=product.getDescription()%>
                 <p><%=product.getUnitPrice()%>원
-                     
+                 <p><a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a></p>  
             </div>
             <%
                 }
@@ -39,6 +39,11 @@
         <div class="card-img-overlay">
         </div>
 </div>
+    <div class="list-group">
+        <a herf= "#" class="list-group-item list-group-item-action" aria-current="ture">iphone 7</a>
+    	<a herf= "#" class="list-group-item list-group-item-action">iphone 8</a>
+</div>
+
     <div class="container">
         <div class="text-center">
             	<h3>
