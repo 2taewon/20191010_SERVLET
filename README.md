@@ -47,5 +47,9 @@ Visit [https://ide.goorm.io](https://ide.goorm.io) to support and learn more abo
 To watch some usage guides, visit [https://help.goorm.io/en/goormide](https://help.goorm.io/en/goormide)
 
 # SERVLET_JSP
-### 9월 7일 : 프로젝트 환경 설정, HELLO WORLD 확인 완료. 
-### 9월 14일 : 로고, 메인화면, 상품 목록 추가.
+### 1. 9월 7일 : 프로젝트 환경 설정, HELLO WORLD 확인 완료. 
+### 2. 9월 14일 : 로고, 메인화면, 상품 목록 추가.
+### 3. 9월 21일 : 상품 목록 추가, 상품 출력.
+### 4. 9월 28일 : 상품 세부정보 페이지 만들기.
+### 5. 10월 5일 : 상품 등록, 데이터 전달 주고받기.
+### 6. 10얼 12일 : 이미지 업로드 및 출력, 폼 입력값 필터링.
