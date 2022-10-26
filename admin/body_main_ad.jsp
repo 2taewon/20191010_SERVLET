@@ -3,6 +3,8 @@
 <%@ page import = "dto.Product"%>
 <%@ page import = "dao.ProductRepository"%>
 
+
+
 <%! String greeting = "어서와요 TWNARA";
     String tagline = "Welcome to TWNARA Market!";%>
     	<div class="jumbotron bg-info" style="text-align:center; ">
@@ -25,7 +27,7 @@
             %>
             <div class = "col-md-4">
                 <div class="card bg-dark text-white">
-                        <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
+                        <img src="../image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                         <div class="card-img-overlay">
                         <h5 class="card-title">이미지 샘플</h5>
                         <p class="card-text">출처 : 구글 검색</p>
@@ -34,7 +36,7 @@
                 <h3><%=product.getPname()%></h3>
                 <p><%=product.getDescription()%>
                 <p><%=product.getUnitPrice()%>원
-                 <p><a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a></p>  
+                 <p><a href="product_detail_ad.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a></p>  
             </div>
             <%
                 }

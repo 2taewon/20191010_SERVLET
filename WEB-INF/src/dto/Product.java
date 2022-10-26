@@ -4,6 +4,7 @@ import java.io.Serializable;
 public class Product implements Serializable { // 인터페이스 구현, 키워드(implements)
     private static final long serialVersionUID = -4274700572038677000L; // 객체를 다시 불러오기 위한 고유번호 UID 
     
+    private String filename;
     private String productId;
     private String pname;
     private Integer unitPrice;
@@ -13,9 +14,9 @@ public class Product implements Serializable { // 인터페이스 구현, 키워
     private long unitsInStock;
     private String condition;
     
-    public Product() {
+    public Product() {           //super 부모, 자식 관계
     	super();
-    }
+     }
     
     public Product(String productId, String pname, Integer unitPrice) {
         this.productId = productId;
@@ -69,5 +70,11 @@ public class Product implements Serializable { // 인터페이스 구현, 키워
     }
     public void setCondition(String condition){
         this.condition = condition;
+    }
+    public void setFilename(String filename){
+        this.filename = filename;
+    }
+    public String getFilename(){
+        return filename;
     }
 }
