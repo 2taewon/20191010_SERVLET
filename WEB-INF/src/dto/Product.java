@@ -13,6 +13,7 @@ public class Product implements Serializable { // 인터페이스 구현, 키워
     private String category;
     private long unitsInStock;
     private String condition;
+    private int quantity;
     
     public Product() {           //super 부모, 자식 관계
     	super();
@@ -76,5 +77,11 @@ public class Product implements Serializable { // 인터페이스 구현, 키워
     }
     public String getFilename(){
         return filename;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
     }
 }
