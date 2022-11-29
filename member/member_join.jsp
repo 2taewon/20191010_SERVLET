@@ -6,80 +6,84 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type ="text/javascript" src = "../js/validation.js"></script>
-<title>상품 등록</title>
+<title>회원 가입</title>
 </head>
 <body>
-    	<jsp:include page ="top_menu_ad.jsp"/>
+    	<jsp:include page ="../top_menu.jsp"/>
     	<div class="jumbotron">
             <div class="container">
-                <h1 class="display-3">상품 등록</h1>
+                <h1 class="display-3">회원 가입</h1>
                 
             </div>
     </div>
     <div class="container">
-        <form name ="newProduct" action="product_add_process.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">
+        <form name ="newMember" action="member_join_process.jsp" class="form-horizontal" method="post" enctype ="multipart/form-data">
         	<div class="form-group row">
-                <label class = "col-sm-2">상품 코드</label>
+                <label class = "col-sm-2">아이디</label>
                 <div class="col-sm-3">
-                    <input type="text" id ="productId" class = "form-control">
+                    <input type="text" id ="memberid" class = "form-control">
                     
                 </div>
             </div>
             <div class = "form-group row">
-                <label class = "col-sm-2">상품명</label>
+                <label class = "col-sm-2">패스워드</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="name" class = "form-control">
+                     <input type="password" id ="password" class = "form-control">
             </div>
             </div>
             <div class = "form-group row">
-                <label class = "col-sm-2">가격</label>
+                <label class = "col-sm-2">패스워드 재입력</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="unitPrice" class = "form-control">
+                     <input type="password" id ="password" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
-                <label class = "col-sm-2">상세 정보</label>
-                <div class="col-sm-5">
-                     <textarea name ="description" cols="50" rows="2"
-                               class="form=control"></textarea>
+                <label class = "col-sm-2">이름</label>
+                <div class="col-sm-3">
+                    <input type="text" id ="name" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
-                <label class = "col-sm-2">제조사</label>
+                <label class = "col-sm-2">성별</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="manufacturer" class = "form-control">
+                     <input type ="radio" name="gender" value="Man"> 남자
+                    <input type ="radio" name="gender" value="Women"> 여자
                 </div>
             </div>
             <div class = "form-group row">
-                <label class = "col-sm-2">분류</label>
+                <label class = "col-sm-2">생일</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="category" class = "form-control">
+                     <input type="date" id ="birth" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
-                <label class = "col-sm-2">재고 수</label>
+                <label class = "col-sm-2">메일주소</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="unitsInStock" class = "form-control">
+                     <input type="text" id ="mail" class = "form-control">
+                </div>
+            </div>
+            <div class = "form-group row">
+                <label class = "col-sm-2">폰번호</label>
+                <div class="col-sm-3">
+                     <input type="text" id ="phone" class = "form-control">(-붙여서 써주세요)
                 </div>
             </div>
              <div class = "form-group row">
-                <label class = "col-sm-2">상태</label>
+                <label class = "col-sm-2">주소</label>
                 <div class="col-sm-5">
-                    <input type ="radio" name="condition" value="New"> 신규 제품
-                    <input type ="radio" name="condition" value="Old"> 중고 제품
-                    <input type ="radio" name="condition" value="Refurbished"> 재생 제품
+                     <input type="text" id ="address" class = "form-control">
                  </div>
             </div>
             <div class = "form-group row">
-            <label class = "col-sm-2">이미지</label>
-                <div class ="col-sm-5">
-                <input type ="file" name= "productImage" class ="form-control">
+                <label class = "col-sm-2">등록 날짜</label>
+                <div class="col-sm-3">
+                     <input type="date" id ="regist_day" class = "form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <input type="submit" class="btn btn-primary" value="등록">
-                    <a href="../login/logout.jsp" class="btn btn-sm btn-success pull-right">로그아웃</a>
+                    <input type="submit" class="btn btn-primary" value="가입" >
+                    <a href="../login/login_user.jsp" class="btn btn-sm btn-success pull-right">로그인(이전페이지)</a>
                 </div>
             </div>
     </form>

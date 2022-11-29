@@ -20,21 +20,24 @@
                 <div class ="form-group row">
                     <label class = "col-sm-2">성명</label>
                     <div class = "col-sm-3">
-                        <input name ="name" type="text" class="form-control"/>
+                        <input name ="name" type="text" class="form-control" min="2022-11-28"/>
                     </div>
                 </div>
                 <div class="form-group row">
 				<label class="col-sm-2">배송일</label>
 				<div class="col-sm-3">
-				<input name="shippingDate" type="text" class="form-control" />(yyyy/mm/dd)
+				<input name="shippingDate" type="date" class="form-control" />
 			</div>
 	  </div>
 	 			<div class="form-group row">
 	   			<label class="col-sm-2">국가명</label>
-	    		<div class="col-sm-3">
-				<input name="country" type="text" class="form-control" />
-	    </div>
-	 </div>
+	    		<select class="form-select" aria-label=".form-select-sm example">
+                                <option value="korea">대한민국</option>
+                                <option value="china">중국</option>
+                                <option value="japan">일본</option>
+                                <option value="USA">미국</option>
+                    </select>
+                </div>
 				<div class="form-group row">
 	  			<label class="col-sm-2">우편번호</label>
 	     		<div class="col-sm-3">

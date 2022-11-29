@@ -10,7 +10,7 @@
     </head>
 <body>
 		<%
-    				String shipping_card ="";
+    				String shipping_cartId ="";
     				String shipping_name ="";
     				String shipping_shippingDate ="";
     				String shipping_country ="";
@@ -22,7 +22,7 @@
     				if (cookies != null){
                         		for (int i = 0; i < cookies.length; i++){
                                     	Cookie thisCookie = cookies[i];
-                                    	String n = thisCookie.getName():
+                                    	String n = thisCookie.getName();
                                     	if (n.equals("Shipping_cartId"))
                                             		shipping_cartId = URLDecoder.decode((thisCookie.getValue()),"utf-8");
                                     	if (n.equals("Shipping_shippingDate"))
