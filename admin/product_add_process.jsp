@@ -21,7 +21,7 @@
 
 
 
-		String productId = multi.getParameter("productid");
+		String productId = multi.getParameter("productId");
 		String name = multi.getParameter("name");
 		String unitPrice = multi.getParameter("unitPrice");
 		String description = multi.getParameter("description");

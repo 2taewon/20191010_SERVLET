@@ -21,25 +21,27 @@
 
 
 		String memberid = multi.getParameter("memberid");
-		String password = multi.getParameter("password");
-		String name = multi.getParameter("name");
+		String pwd = multi.getParameter("pwd");
+		String username = multi.getParameter("username");
 		String gender = multi.getParameter("gender");
 		String birth= multi.getParameter("birth");
 		String mail = multi.getParameter("mail");
 		String phone = multi.getParameter("phone");
-		String address = multi.getParameter("address");
-        String regist_day = multi.getParameter("regist_day");
+		String addressname = multi.getParameter("addressname");
+        java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyy/MM/dd(HH:mm:ss)");
+		String regist_day = formatter.format(new java.util.Date()); 
+        
             	
         String sql = "insert into member values(?,?,?,?,?,?,?,?,?)";
 	pstmt = conn.prepareStatement(sql); // 쿼리문 몸체만 넣기
 	pstmt.setString(1, memberid); // 각 필드 설정 - ? 순서대로
-	pstmt.setString(2, password);
-	pstmt.setString(3, name);
+	pstmt.setString(2, pwd);
+	pstmt.setString(3, username);
 	pstmt.setString(4, gender);
 	pstmt.setString(5, birth);
 	pstmt.setString(6, mail);
 	pstmt.setString(7, phone);
-	pstmt.setString(8, address);
+	pstmt.setString(8, addressname);
     pstmt.setString(9, regist_day);
 	pstmt.executeUpdate(); // 최종 SQL 쿼리 실행
 	
@@ -50,5 +52,5 @@
 
 
 		
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("../index.jsp");
 %>

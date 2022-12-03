@@ -21,45 +21,45 @@
         	<div class="form-group row">
                 <label class = "col-sm-2">상품 코드</label>
                 <div class="col-sm-3">
-                    <input type="text" id ="productId" class = "form-control">
+                    <input type="text" name="productId" id ="productId" class = "form-control">
                     
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">상품명</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="name" class = "form-control">
+                     <input type="text" name ="name" class = "form-control">
             </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">가격</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="unitPrice" class = "form-control">
+                     <input type="text" name ="unitPrice" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">상세 정보</label>
                 <div class="col-sm-5">
                      <textarea name ="description" cols="50" rows="2"
-                               class="form=control"></textarea>
+                               class="form=control" ></textarea>
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">제조사</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="manufacturer" class = "form-control">
+                     <input type="text" name ="manufacturer" class = "form-control" id="manufacturer">
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">분류</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="category" class = "form-control">
+                     <input type="text" id ="category" class = "form-control" name="category">
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">재고 수</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="unitsInStock" class = "form-control">
+                     <input type="text" id ="unitsInStock" class = "form-control" name="unitsInStock">
                 </div>
             </div>
              <div class = "form-group row">
@@ -73,7 +73,7 @@
             <div class = "form-group row">
             <label class = "col-sm-2">이미지</label>
                 <div class ="col-sm-5">
-                <input type ="file" name= "productImage" class ="form-control">
+                <input type ="file" name= "productImage" class ="form-control" id="productImage">
                 </div>
             </div>
             <div class="form-group row">

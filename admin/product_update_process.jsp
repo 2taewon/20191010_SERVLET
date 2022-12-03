@@ -26,7 +26,7 @@
 		price = 0;
 	else
 		price = Integer.valueOf(unitPrice);
-long stock;
+    long stock;
 
 	if (unitsInStock.isEmpty())
 		stock = 0;

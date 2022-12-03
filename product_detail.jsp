@@ -45,10 +45,10 @@
 				<h4><%=product.getUnitPrice()%>원</h4>
                 
                 <p><form name="addForm" action = "cart/product_cart_add.jsp?id=<%=product.getProductId()%>" method="post">
-                					<a herf ="#" class="btn btn-info" onclick="addToCart()">상품주문 &raquo;</a>
-                					<a herf ="cart/product_cart.jsp" class="btn btn-warning">장바구니&raquo;</a>
+                					<a href ="#" class="btn btn-info" onclick="addToCart()">상품주문 &raquo;</a>
+                					<a href ="cart/product_cart.jsp" class="btn btn-warning">장바구니&raquo;</a>
                 </form>
-                </p>
+                
             <div class="card bg-dark text-white">
                     <img src="image/product/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
@@ -60,7 +60,9 @@
 		</div>
 		</div>
 		<hr>
+    
 	</div>
+
     <%@ include file="footer.jsp" %>
 </body>
 </html>

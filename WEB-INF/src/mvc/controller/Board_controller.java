@@ -27,7 +27,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
 		String contextPath = request.getContextPath();
 		String command = RequestURI.substring(contextPath.length());
 		
-		response.setContentType("text/html; charset=utf-8");
+		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("utf-8");
 	
 		if (command.equals("/BoardListAction.do")) {//등록된 글 목록 페이지 출력하기
@@ -36,7 +36,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
 			rd.forward(request, response);
 		} else if (command.equals("/BoardWriteForm.do")) { // 글 등록 페이지 출력하기
 				requestLoginName(request);
-				RequestDispatcher rd = request.getRequestDispatcher("./board/board_writeform.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/board/board_writeform.jsp");
 				rd.forward(request, response);				
 		} else if (command.equals("/BoardWriteAction.do")) {// 새로운 글 등록하기
 				requestBoardWrite(request);
@@ -100,7 +100,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response) thr
 	public void requestLoginName(HttpServletRequest request){
 					
 		String id = request.getParameter("id");	
-		Board_dao  dao = Board_dao.getInstance();	
+		Board_dao dao = Board_dao.getInstance();	
 		String name = dao.getLoginNameById(id);			
 		request.setAttribute("name", name);									
 	}

@@ -51,7 +51,7 @@
 		<%
 		     } else if (edit.equals("delete")) {
 		%>
-		     <a href="#" onclick="deleteConfirm('<%=rs.getString("p_id")%>')" class="btn btn-danger" role="button">삭제 &raquo;></a>
+		     <input type="submit" href="./product_delete.jsp" value="삭제 &raquo;>" onclick="deleteConfirm('<%=rs.getString("p_id")%>')" class="btn btn-danger" role="button">
 		<%
 		     }
 		%>				

@@ -6,6 +6,37 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type ="text/javascript" src = "../js/validation.js"></script>
+<script>
+     var compare_result = false;
+
+ function fn_compare_pwd(){
+
+            var pwd1 = $("pwd").val();
+
+            var pwd2 = $("pwd2").val();
+
+            var $s_result = $("#s_result");
+
+            
+
+            if(pwd1 == pwd2){
+
+                       compare_result = true;
+
+                       $s_result.text("비밀번호가 일치합니다.");
+
+                       return;
+
+            }
+
+            
+
+            compare_result = false;
+
+            $s_result.text("비밀번호가 일치하지 않습니다.");
+
+ }
+    </script>
 <title>회원 가입</title>
 </head>
 <body>
@@ -21,26 +52,26 @@
         	<div class="form-group row">
                 <label class = "col-sm-2">아이디</label>
                 <div class="col-sm-3">
-                    <input type="text" id ="memberid" class = "form-control">
+                    <input type="text" name ="memberid" id ="memberid" class = "form-control">
                     
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">패스워드</label>
                 <div class="col-sm-3">
-                     <input type="password" id ="password" class = "form-control">
+                     <input type="password" name= "pwd" id ="pwd" class = "form-control">
             </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">패스워드 재입력</label>
                 <div class="col-sm-3">
-                     <input type="password" id ="password" class = "form-control">
+                    <input type="password" name= "pwd2" id ="pwd2" class = "form-control"><span id="s_result" style="font-size: 12px;">비밀번호가 일치하지 않습니다.</span>
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">이름</label>
                 <div class="col-sm-3">
-                    <input type="text" id ="name" class = "form-control">
+                    <input type="text" name="username" id ="username" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
@@ -53,32 +84,26 @@
             <div class = "form-group row">
                 <label class = "col-sm-2">생일</label>
                 <div class="col-sm-3">
-                     <input type="date" id ="birth" class = "form-control">
+                     <input type="date" name="birth" id ="birth" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">메일주소</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="mail" class = "form-control">
+                     <input type="email" name="mail" id ="mail" class = "form-control">
                 </div>
             </div>
             <div class = "form-group row">
                 <label class = "col-sm-2">폰번호</label>
                 <div class="col-sm-3">
-                     <input type="text" id ="phone" class = "form-control">(-붙여서 써주세요)
+                     <input type="text" name="phone" id ="phone" class = "form-control">(-붙여서 써주세요)
                 </div>
             </div>
              <div class = "form-group row">
                 <label class = "col-sm-2">주소</label>
                 <div class="col-sm-5">
-                     <input type="text" id ="address" class = "form-control">
+                     <input type="text" name="addressname" id ="addressname" class = "form-control">
                  </div>
-            </div>
-            <div class = "form-group row">
-                <label class = "col-sm-2">등록 날짜</label>
-                <div class="col-sm-3">
-                     <input type="date" id ="regist_day" class = "form-control">
-                </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-offset-2 col-sm-10">
