@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <link href="mainstyle.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+    body{
+    margin:0;
+    color:#ffffff;
+    background:#c8c8c8;
+    font:600 16px/18px 'Open Sans',sans-serif;
+  } 
+  
+    hr {
+    background: #ffffff;
+}
+.buttons{
+    background: #c8c8c8;
+    width : 185px;
+    height : 100px;
+}
+span{
+    font-size: 8px;
+    text-align: center;
+}
+    </style>
+    <script>
+        
+        function read_API_username(){
+        
+            var Temp;
+
+            $.ajax({
+                url: 'member_API.php', 
+                type: 'get',
+                dataType: 'json',
+                async :false,
+                success: function (data) {
+
+                    Temp = data.member_user;
+
+                },
+
+                error: function(e) {
+                    alert("");  
+                }
+            });
+
+            return Temp;
+        }
+    </script>
+    <title>버스탑 메인</title>
+</head>
+<body>
+    <div class="login-wrap">
+    <div class="login-html">
+    <div class="group" style="text-align: center;">
+        <p><script>document.write(read_API_username())</script>님 안녕하세요!</p>
+        <hr>
+    </div>
+    	<div class="jumbotron" style="text-align:center; background :#c8c8c8; color : #000000;" >
+            <div class="container">
+                    남은 금액 <br><br>0원
+            </div>
+         </div>
+         <div class="col-xs-2">
+            <button type="button" onclick="location.href='bell.html'" class="buttons"style="width : 49%; height : 100px;">비상벨</button>
+            <button type="button" onclick="location.href='pay.html'" class="buttons" style="width : 49%; height : 100px; float:right;">결제</button>
+         </div> 
+         <br>
+         <div class="col-xs-2">
+            <button type="button" onclick="location.href='oftenbus.html'" class="buttons"style="width : 49%; height : 100px;">선호하는 버스</button>
+            <button type="button" onclick="location.href='map.html'" class="buttons" style="width : 49%; height : 100px; float:right;">버스 지도</button>
+         </div>
+         <br>
+        <div class ="footer">
+            <button type="button" onclick="location.href='question.html'" style="width : 100%; height : 30px; background: #c8c8c8;">고객센터</button>
+            <hr>
+            </div>
+            <p><span>CREATE BY LTW</span></p>
+  </div>
+  
+</div>
+</body>
+</html>

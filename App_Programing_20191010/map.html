@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <link href="mainstyle.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	</script>
+    <title>지도</title>
+</head>
+<body>
+    <div class="login-wrap">
+    <div class="login-html">
+    	<div class="jumbotron" style="text-align:center; background :#c8c8c8; ">
+            <div class="container">
+                    버스 길찾기
+            </div>
+         </div>
+        <div id ="map" style="width:100%; height:380px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae6eeb8fa923de147a2623fe9506b1a1"></script>
+	    <script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(37.37984260371113, 126.92842279018032),
+			level: 4
+		};
+
+		var map = new kakao.maps.Map(container, options);
+        var markerPosition  = new kakao.maps.LatLng(37.38449407381525, 126.93617710266942); 
+        var markerPosition  = new kakao.maps.LatLng(37.37984260371113, 126.92842279018032);
+        var marker = new kakao.maps.Marker({
+        position: markerPosition
+        });
+
+        marker.setMap(map);
+        
+        var iwContent = '<div style="padding:5px;">자주 가는 곳 <br><a href="https://map.kakao.com/link/map/자주 가는 곳,37.37984260371113, 126.92842279018032" style="color:blue" target="_blank">큰지도보기</a>|<a href="https://map.kakao.com/link/to/자주 가는 곳,37.37984260371113, 126.92842279018032" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition = new kakao.maps.LatLng(33.450701, 126.570667); 
+
+
+        var infowindow = new kakao.maps.InfoWindow({
+        position : iwPosition, 
+        content : iwContent
+    });
+    infowindow.open(map, marker); 
+	    </script>
+  </div>
+</div>
+</body>
+</html>

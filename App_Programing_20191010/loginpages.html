@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <script language="javascript">
+
+      function Input() 
+      {
+
+          if(document.frmInput.user.value == "") {
+              alert("아이디를 확인해주세요.");
+              document.frmInput.user.focus();
+              return false;
+          }
+          if(document.frmInput.pass.value == "") {
+              alert("비밀번호를 확인해주세요.");
+              document.frmInput.pass.focus();
+              return false;
+          }
+          if(document.frmInput.pass2.value == "") {
+              alert("비밀번호를 재입력해주세요.");
+              document.frmInput.pass2.focus();
+              return false;
+          }
+
+          if(document.frmInput.email.value == "") {
+              alert("이메일 주소를 확인해주세요.");
+              document.frmInput.email.focus();
+              return false;
+          }
+
+         
+          document.frmInput.submit();
+      }
+
+  </script>
+</head>
+<body>
+  <div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">로그인</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">회원가입</label>
+    <div class="login-form">
+      <form action="loginCheck.php" method="post" enctype="multipart/form-data">
+      <div class="sign-in-htm">
+        <div class="group">
+            <label for="id" class="label">아이디</label>
+            <input id="id" name="id" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="pw" class="label">비밀번호</label>
+            <input id="pw" name="pw" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <input type="submit" class="button" value="로그인">
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+        </div>
+      </div>
+    </form>
+      <form name="frmInput" action="memberWrite.php" method="post" enctype="multipart/form-data">
+      <div class="sign-up-htm">
+        <div class="group">
+            <label for="user" class="label">아이디</label>
+            <input id="user" name="user" type="text" class="input">
+          </div>
+          <div class="group">
+            <label for="pass" class="label">비밀번호</label>
+            <input id="pass" name="pass" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <label for="pass2" class="label">비밀번호 확인</label>
+            <input id="pass2" name="pass2" type="password" class="input" data-type="password">
+          </div>
+          <div class="group">
+            <label for="email" class="label">이메일 주소</label>
+            <input id="email" name="email" type="email" class="input">
+          </div>
+          <div class="group">
+          <button type="button" onclick="Input()" class="button">회원가입</button>
+          </div>
+          <div class="hr"></div>
+          <div class="foot-lnk">
+            <label for="tab-1">이미 회원이신가요?</a>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

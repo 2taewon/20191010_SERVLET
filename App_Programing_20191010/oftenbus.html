@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <link href="mainstyle.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>자주 타는 버스</title>
+</head>
+<style>
+    label{
+        font : #ffffff;
+    }
+   
+</style>
+<script>
+    function add(){
+        alert('추가 되었습니다.');
+        document.getElementById('frm').submit();
+        }
+    function del(){
+        alert('삭제 되었습니다.');
+    }
+    function sch(){
+        alert('검색합니다.')
+    }
+    
+    function read_API_bus(){
+        
+        var Temp;
+
+        $.ajax({
+            url: 'often_API.php', 
+            type: 'get',
+            dataType: 'json',
+            async :false,
+            success: function (data) {
+
+                Temp = data.oftenbus_num;
+
+            },
+
+            error: function(e) {
+                alert("");  
+            }
+        });
+
+        return Temp;
+    }
+</script>
+<body>
+    <div class="login-wrap">
+    <div class="login-html">
+        <input id="oftenbus_num" name="oftenbus_num" type="text" class="center" style="width:85%;">
+        <button type="button" onclick="sch();" style="width:15%; float:right;">검색</button>
+        <div class="jumbotron" style="text-align:center; background :#c8c8c8; ">
+         <div class="container">
+           <p>현재 <script>document.write(read_API_bus())</script>20 <br>자주타는 버스로 지정 중입니다.</p>
+         </div>
+         </div>
+         <br><br><br><br>
+         <form name="frmInput" id="frm" action="oftenWrite.php" method="post" enctype="multipart/form-data">
+         <div class="container">
+         <button type="button" onclick="add();" class="btn btn-success"style="width : 46%; height : 40px;">추가</button>
+         <button type="button" onclick="del();" class="btn btn-danger"style="width : 46%; height : 40px; float:right;">삭제</button>
+         </div>
+         </form>
+  </div>
+</div>
+</body>
+</html>
